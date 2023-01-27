@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fFfFfF;
+  padding: 20px;
+  font-family: HELVETICA;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #FCC00D;
+}
+
+.btn.active {
+  background-color: #941D81;
+  color: white;
+}
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+</style>
+</head>
+<body>
+<div style="position:fixed;left:30;top:5;"><a href="file:///Volumes/NO%20NAME/diplomado/paginas/index.html"><img src="../imagenes/ICONOS/logo.png"width="80px" height="50px"/>
+</a></div>
+
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+ <br><br>
+<h1><center>PORTAFOLIO</center></h1>
+<br><br>
+
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')">TODO
+  </button>
+  <button class="btn" onclick="filterSelection('nature')">EDITORIAL</button>
+  <button class="btn" onclick="filterSelection('cars')">FOTOGRAFIA</button>
+  <button class="btn" onclick="filterSelection('people')">MULTIMEDIA</button>
+  <button class="btn" onclick="filterSelection('loco')">BRANDING</button>
+
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/2-OCTUBRE.HTML">
+      <img src="../imagenes/EDITORIAL/2 octubre.jpg" alt="Mountains" style="width:100%"></a>
+      <h4>CARTEL DEL MOVIMIENTO ESTUDIANTIL DEL 02 DE OCTUBRE 1968</h4>
+      <p>2018</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/CINCUATE.HTML">
+    <img src="../imagenes/EDITORIAL/cincuate.jpg" alt="Lights" style="width:100%"></a>
+      <h4>CARTEL DE LA ESPECIE CINCUATE DE XOCHIMILCO</h4>
+      <p>2018</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/SALO.HTML">
+    <img src="../imagenes/EDITORIAL/desnudo.jpg" alt="Nature" style="width:100%"></a>
+      <h4>POSTER REALIZADO PARA LA PELICULA 120 DIAS EN SODOMA DE 1975</h4>
+      <p>2019</p>
+    </div>
+  </div>
+
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/EJEMPLAR.HTML">
+    <img src="../imagenes/EDITORIAL/editorial1.jpg" alt="Lights" style="width:100%"></a>
+      <h4>EJEMPLAR DEL LIBRO ESCENOGRAFIA TEATRAL </h4>
+      <p>2019</p>
+    </div>
+  </div>
+
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/LA%20JORNADA.HTML">
+    <img src="../imagenes/EDITORIAL/editorial2.jpg" alt="Lights" style="width:100%"></a>
+      <h4>PORTADA Y ARTICULO REALIZADO COMO SIMULACION DEL PERIODICO LA JORNADA</h4>
+      <p>2020</p>
+    </div>
+  </div>
+
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/BROCHURE.HTML">
+    <img src="../imagenes/EDITORIAL/fast fashion.jpg" alt="Lights" style="width:100%"></a>
+      <h4>BROCHURE REALIZADO CON EL TEMA FAST FASHION</h4>
+      <p>2021</p>
+    </div>
+  </div>
+
+  
+
+  
+  <div class="column cars">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/fotografia.HTML">
+      <img src="../imagenes/FOTOGRAFIA/muerte.jpg" alt="Car" style="width:100%"></a>
+      <h4>NATURALEZA MUERTA </h4>
+      <p>2019</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/fotografia1.HTML">
+    <img src="../imagenes/FOTOGRAFIA/muerte1.jpg" alt="Car" style="width:100%"></a>
+      <h4>NATURALEZA MUERTE</h4>
+      <p>2019</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/fotografia2.HTML">
+    <img src="../imagenes/FOTOGRAFIA/paisaje.jpg" alt="Car" style="width:100%"></a>
+      <h4>FOTOGRAFIA TOMADA DESDE EL MONUMENTO A LA REVOLUCION</h4>
+      <p>2020</p>
+    </div>
+  </div>
+
+
+<div class="column cars">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/fotografia3.HTML">
+    <img src="../imagenes/FOTOGRAFIA/paisaje1.jpg" alt="Car" style="width:100%"></a>
+      <h4>FOTOGRAFIA TOMADA DESDE EL MONUMENTO A LA REVOLUCION</h4>
+      <p>2020</p>
+    </div>
+  </div>
+
+  <div class="column cars">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/fotografia4.HTML">
+    <img src="../imagenes/FOTOGRAFIA/paisaje2.jpg" alt="Car" style="width:100%"></a>
+      <h4>FOTOGRAFIA TOMADA EN EL PARQUE ESPANA</h4>
+      <p>2020</p>
+    </div>
+  </div>
+
+  <div class="column cars">
+    <div class="content">
+     <a href="file:///Volumes/NO%20NAME/diplomado/paginas/fotografia5.HTML">
+    <img src="../imagenes/FOTOGRAFIA/paisaje3.jpg" alt="Car" style="width:100%"></a>
+      <h4>FOTOGRAFIA TOMADA DESDE EL MONUMENTO A LA REVOLUCION</h4>
+      <p>2020</p>
+    </div>
+  </div>
+
+
+  <div class="column cars">
+    <div class="content">
+        <a href="file:///Volumes/NO%20NAME/diplomado/paginas/fotografia6.HTML">
+    <img src="../imagenes/FOTOGRAFIA/periodismo1.jpg" alt="Car" style="width:100%"></a>
+      <h4>SERIE FOTOGRAFICA DE LA TRADICION EN XOCHITEPEC, XOCHIMILCO</h4>
+      <p>2021</p>
+    </div>
+  </div>
+
+  <div class="column cars">
+    <div class="content">
+        <a href="file:///Volumes/NO%20NAME/diplomado/paginas/fotografia7.HTML">
+    <img src="../imagenes/FOTOGRAFIA/periodismo3.jpg" alt="Car" style="width:100%"></a>
+      <h4>SERIE FOTOGRAFICA DE LA TRADICION EN XOCHITEPEC, XOCHIMILCO</h4>
+      <p>2021</p>
+    </div>
+  </div>
+
+  <div class="column cars">
+    <div class="content">
+        <a href="file:///Volumes/NO%20NAME/diplomado/paginas/fotografia8.HTML">
+    <img src="../imagenes/FOTOGRAFIA/periodismo4.jpg" alt="Car" style="width:100%"></a>
+      <h4>SERIE FOTOGRAFICA DE LA TRADICION EN XOCHITEPEC, XOCHIMILCO</h4>
+      <p>2021</p>
+    </div>
+  </div>
+
+  <div class="column cars">
+    <div class="content">
+        <a href="file:///Volumes/NO%20NAME/diplomado/paginas/fotografia9.HTML">
+    <img src="../imagenes/FOTOGRAFIA/periodismo6.jpg" alt="Car" style="width:100%"></a>
+      <h4>SERIE FOTOGRAFICA DE LA TRADICION EN XOCHITEPEC, XOCHIMILCO</h4>
+      <p>2021</p>
+    </div>
+  </div>
+
+  <div class="column cars">
+    <div class="content">
+        <a href="file:///Volumes/NO%20NAME/diplomado/paginas/fotografia10.HTML">
+    <img src="../imagenes/FOTOGRAFIA/periodismo7.jpg" alt="Car" style="width:100%"></a>
+      <h4>SERIE FOTOGRAFICA DE LA TRADICION EN XOCHITEPEC, XOCHIMILCO</h4>
+      <p>2021</p>
+    </div>
+  </div>
+
+<div class="column cars">
+    <div class="content">
+        <a href="file:///Volumes/NO%20NAME/diplomado/paginas/fotografia11.HTML">
+    <img src="../imagenes/FOTOGRAFIA/periodismo9.jpg" alt="Car" style="width:100%"></a>
+      <h4>SERIE FOTOGRAFICA DE LA TRADICION EN XOCHITEPEC, XOCHIMILCO</h4>
+      <p>2021</p>
+    </div>
+  </div>
+
+  <div class="column cars">
+    <div class="content">
+        <a href="file:///Volumes/NO%20NAME/diplomado/paginas/fotografia12.HTML">
+    <img src="../imagenes/FOTOGRAFIA/periodismo11.jpg" alt="Car" style="width:100%"></a>
+      <h4>SERIE FOTOGRAFICA DE LA TRADICION EN XOCHITEPEC, XOCHIMILCO</h4>
+      <p>2021</p>
+    </div>
+  </div>
+
+  <div class="column cars">
+    <div class="content">
+        <a href="file:///Volumes/NO%20NAME/diplomado/paginas/fotografia13.HTML">
+    <img src="../imagenes/FOTOGRAFIA/periodismo12.jpg" alt="Car" style="width:100%"></a>
+      <h4>SERIE FOTOGRAFICA DE LA TRADICION EN XOCHITEPEC, XOCHIMILCO</h4>
+      <p>2021</p>
+    </div>
+  </div>
+
+  <div class="column cars">
+    <div class="content">
+        <a href="file:///Volumes/NO%20NAME/diplomado/paginas/fotografia14.HTML">
+    <img src="../imagenes/FOTOGRAFIA/retrato.jpg" alt="Car" style="width:100%"></a>
+      <h4>RETRATO ARTISTICO</h4>
+      <p>2022</p>
+    </div>
+  </div>
+
+   <div class="column cars">
+    <div class="content">
+        <a href="file:///Volumes/NO%20NAME/diplomado/paginas/fotografia15.HTML">
+    <img src="../imagenes/FOTOGRAFIA/retrato1.jpg" alt="Car" style="width:100%"></a>
+      <h4>RETRATO ARTISTICO</h4>
+      <p>2022</p>
+    </div>
+  </div>
+
+   <div class="column cars">
+    <div class="content">
+        <a href="file:///Volumes/NO%20NAME/diplomado/paginas/fotografia16.HTML">
+    <img src="../imagenes/FOTOGRAFIA/retrato2.jpg" alt="Car" style="width:100%"></a>
+      <h4>RETRATO ARTISTICO</h4>
+      <p>2022</p>
+    </div>
+  </div>
+
+
+ 
+  <div class="column people">
+    <div class="content">
+    <a href="file:///Volumes/NO%20NAME/diplomado/paginas/boca.HTML">
+       <video src="../imagenes/ILUSTRACION/boca.mov" autoplay muted loop alt="Car" style="width:100%"></a>
+      <h4>GIF CON LA TECNICA DE COLLAGE</h4>
+      <p>2020</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <video src="../imagenes/ILUSTRACION/krita.mp4" autoplay muted loop alt="Car" style="width:100%">
+      <h4>VIDEO CONMEMORATIVO DEL DIA DE MUERTOS</h4>
+      <p>2020</p>
+    </div>
+  </div>
+
+ 
+
+  <div class="column people">
+    <div class="content">
+      <button id="myBtn">
+   <video src="../imagenes/VIDEO/the bay.mp4" autoplay muted loop alt="Car" style="width:100%"></button>
+      <h4>VIDEOCLIP DE LA CANCION THE BAY DE METRONOMY</h4>
+      <p>2021</p>
+
+      <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <video src="../imagenes/VIDEO/the bay.mp4" width="100%" controls></video>
+  </div>
+
+</div>
+    </div>
+  </div>
+
+  
+  <div class="column loco">
+    <div class="content">
+
+        <a href="file:///Volumes/NO%20NAME/diplomado/paginas/branding.HTML">
+    <img src="../imagenes/BRANDING/biovida0.jpg" alt="loco" style="width:100%"></a>
+      <h4>LOGOTIPO PRODUCIDO PARA UNA CAMPANA ECOLOGICA</h4>
+      <p>2019</p>
+    </div>
+  </div>
+
+
+<div class="column loco">
+    <div class="content">
+
+        <a href="file:///Volumes/NO%20NAME/diplomado/paginas/branding1.HTML">
+    <img src="../imagenes/BRANDING/climax0.jpg" alt="loco" style="width:100%"></a>
+      <h4>LOGOTIPO CREADO PARA UNA MARCA DE JUGUETES SEXUALES</h4>
+      <p>2020</p>
+    </div>
+  </div>
+
+<div class="column loco">
+    <div class="content">
+       <a href="file:///Volumes/NO%20NAME/diplomado/paginas/branding2.HTML"> 
+    <img src="../imagenes/BRANDING/creativarte0.jpg" alt="loco" style="width:100%"></a>
+      <h4>LOGOTIPO REALIZADO PARA UNA PAGINA WEB DE CURSOS EDUCATIVOS</h4>
+      <p>2021</p>
+    </div>
+  </div>
+
+
+
+  
+<div class="column loco">
+    <div class="content">
+     <a href="file:///Volumes/NO%20NAME/diplomado/paginas/branding3.HTML">
+    <img src="../imagenes/BRANDING/fruver0.jpg" alt="loco" style="width:100%"></a>
+      <h4>LOGOTIPO ELABORADO PARA UNA TIENDA DE FRUTAS Y VERDURAS</h4>
+      <p>2022</p>
+    </div>
+  </div>
+
+
+
+ 
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+<table border="0px" width="100%" height="150px">
+<tr>
+<td bgcolor="000000"><font color="white"><font face="HELVETICA"> 
+<br>
+<center><b>CONTACTO</b><a name="T2"></a>
+<br><br>
+
+
+<a href="https://www.instagram.com/violetaatrejo/?hl=es-la"><img src="../imagenes/ICONOS/ig.png" width="30px" height="30px"></img></a>
+
+&nbsp;&nbsp;&nbsp;
+Violetaa Trejo
+
+&nbsp;&nbsp;&nbsp;
+<a href="https://web.facebook.com/violetaatrejo">
+<img src="../imagenes/ICONOS/fb.png" width="40px" height="30px"></img></a>
+&nbsp;&nbsp;&nbsp;
+Violetaa Trejo
+
+
+&nbsp;&nbsp;&nbsp;
+<img src="../imagenes/ICONOS/gmail.png" width="40px" height="40px"></img>
+
+&nbsp;&nbsp;&nbsp;
+violetaatrejo@gmail.com
+
+<br><br>
+Violetaa Trejo / Todos los derechos reservados
+</center>
+</font>
+</td>
+</tr>
+
+
+</body>
+</html>

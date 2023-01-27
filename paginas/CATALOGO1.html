@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fFfFfF;
+  padding: 20px;
+  font-family: HELVETICA;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #FCC00D;
+}
+
+.btn.active {
+  background-color: #941D81;
+  color: white;
+}
+
+
+</style>
+</head>
+<body>
+
+<div style="position:fixed;left:20;top:5;"><a href="file:///Volumes/NO%20NAME/diplomado/paginas/index.html"><img src="../imagenes/ICONOS/logo.png"width="80px" height="50px"/>
+</a></div>
+
+
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+ <br><br>
+<h1><center> CATALOGO</center></h1>
+<br><br>
+
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')">TODO 
+  </button>
+  <button class="btn" onclick="filterSelection('nature')">ARETES</button>
+  <button class="btn" onclick="filterSelection('cars')">MOCHILAS</button>
+  <button class="btn" onclick="filterSelection('people')">PERFUME</button>
+
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/ARETE.html">
+      <img src="../imagenes/aretes/ARETE.jpg" alt="Mountains" style="width:100%"></a>
+      <h4>ARETE AGUA</h4>
+      <p>$150</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/ARETE1.html">
+    <img src="../imagenes/aretes/ARETE1.jpg" alt="Lights" style="width:100%"></a>
+      <h4>ARETE HADA MORADO</h4>
+      <p>$150</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/ARETE2.html">
+    <img src="../imagenes/aretes/ARETE2.jpg" alt="Nature" style="width:100%"></a>
+      <h4>ARETE HADA VERDE</h4>
+      <p>$150</p>
+    </div>
+  </div>
+
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/ARETE3.html">
+    <img src="../imagenes/aretes/ARETE3.jpg" alt="Lights" style="width:100%"></a>
+      <h4>ARETE PLATA DRAGON</h4>
+      <p>$100.</p>
+    </div>
+  </div>
+
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/ARETE4.html">
+    <img src="../imagenes/aretes/ARETE4.jpg" alt="Lights" style="width:100%"></a>
+      <h4>ARETE PLATA ELFO </h4>
+      <p>$100</p>
+    </div>
+  </div>
+
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/ARETE5.html">
+    <img src="../imagenes/aretes/ARETE5.jpg" alt="Lights" style="width:100%"></a>
+      <h4>ARETES MARIPOSA AZUL</h4>
+      <p>$50</p>
+    </div>
+  </div>
+
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/ARETE6.html">
+    <img src="../imagenes/aretes/ARETE6.jpg" alt="Lights" style="width:100%"></a>
+      <h4>ARETES MARIPOSA ROSA</h4>
+      <p>$50</p>
+    </div>
+  </div>
+
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/ARETE7.html">
+    <img src="../imagenes/aretes/ARETE7.jpg" alt="Lights" style="width:100%"></a>
+      <h4>ARETES MARIPOSA MORADO/ AZUL</h4>
+      <p>$50</p>
+    </div>
+  </div>
+
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/ARETE8.html">
+    <img src="../imagenes/aretes/ARETE8.jpg" alt="Lights" style="width:100%"></a>
+      <h4>ARETES MARIPOSA AMARILLO/ MORADO</h4>
+      <p>$50</p>
+    </div>
+  </div>
+
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/ARETE9.html">
+    <img src="../imagenes/aretes/ARETE9.jpg" alt="Lights" style="width:100%"></a>
+      <h4>ARETES MARIPOSA VERDE</h4>
+      <p>$50</p>
+    </div>
+  </div>
+
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/ARETE10.html">
+    <img src="../imagenes/aretes/ARETE10.jpg" alt="Lights" style="width:100%"></a>
+      <h4>ARETES MARIPOSA AZUL/ LAZOS</h4>
+      <p>$50</p>
+    </div>
+  </div>
+
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/ARETE11.html">
+    <img src="../imagenes/aretes/ARETE11.jpg" alt="Lights" style="width:100%"></a>
+      <h4>ARETES DE VACA</h4>
+      <p>$30</p>
+    </div>
+  </div>
+
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/ARETE12.html">
+    <img src="../imagenes/aretes/ARETE12.jpg" alt="Lights" style="width:100%"></a>
+      <h4>ARETES DE GATO BLANCO</h4>
+      <p>$30</p>
+    </div>
+  </div>
+
+  <div class="column nature">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/ARETE13.html">
+    <img src="../imagenes/aretes/ARETE13.jpg" alt="Lights" style="width:100%"></a>
+      <h4>ARETES DE GATO NEGRO</h4>
+      <p>$30</p>
+    </div>
+  </div>
+  
+  <div class="column cars">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/mocila.html">
+      <img src="../imagenes/MOCILA/mocila 1.jpg" alt="Car" style="width:100%"></a>
+      <h4>MOCHILA BANDERA GRAN BRETAÑA</h4>
+      <p>$300</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/mocila1.html">
+    <img src="../imagenes/MOCILA/mocila 2.jpg" alt="Car" style="width:100%"></a>
+      <h4>MOCHILA BANDERA HOLANDA</h4>
+      <p>$300</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/mocila2.html">
+    <img src="../imagenes/MOCILA/mocila 3.jpg" alt="Car" style="width:100%"></a>
+      <h4>MOCHILA BANDERA E.U.A</h4>
+      <p>$300</p>
+    </div>
+  </div>
+
+
+<div class="column cars">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/mocila3.html">
+    <img src="../imagenes/MOCILA/mocila 4.jpg" alt="Car" style="width:100%"></a>
+      <h4>MOCHILA BANDERA ARGENTINA</h4>
+      <p>$300</p>
+    </div>
+  </div>
+
+  <div class="column cars">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/mocila4.html">
+    <img src="../imagenes/MOCILA/mocila 5.jpg" alt="Car" style="width:100%"></a>
+      <h4>MOCHILA BANDERA MEXICO</h4>
+      <p>$300</p>
+    </div>
+  </div>
+
+  <div class="column cars">
+    <div class="content">
+     <a href="file:///Volumes/NO%20NAME/diplomado/paginas/mocila6.html">
+    <img src="../imagenes/MOCILA/mocila 6.jpg" alt="Car" style="width:100%"></a>
+      <h4>MOCHILA BANDERA FRANCIA</h4>
+      <p>$300</p>
+    </div>
+  </div>
+
+
+  <div class="column cars">
+    <div class="content">
+        <a href="file:///Volumes/NO%20NAME/diplomado/paginas/mocila5.html">
+    <img src="../imagenes/MOCILA/mocila 8.jpg" alt="Car" style="width:100%"></a>
+      <h4>MOCHILA BANDERA CANADA</h4>
+      <p>$300</p>
+    </div>
+  </div>
+
+
+
+  <div class="column people">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/Perfume.html">
+      <img src="../imagenes/PERFUME/perfume.jpg" alt="Car" style="width:100%"></a>
+      <h4>PERFUME CATCH</h4>
+      <p>$380</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/Perfume1.html">
+    <img src="../imagenes/PERFUME/perfume1.jpg" alt="Car" style="width:100%"></a>
+      <h4>PERFUME BLU</h4>
+      <p>$290</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+    <a href="file:///Volumes/NO%20NAME/diplomado/paginas/Perfume2.html">
+    <img src="../imagenes/PERFUME/perfume2.jpg" alt="Car" style="width:100%"></a>
+      <h4>PERFUME MISS DIVA</h4>
+      <p>$200</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/Perfume3.html">
+    <img src="../imagenes/PERFUME/perfume3.jpg" alt="Car" style="width:100%"></a>
+      <h4>PERFUME JENNY SHOO</h4>
+      <p>$230</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/Perfume4.html">
+    <img src="../imagenes/PERFUME/perfume4.jpg" alt="Car" style="width:100%"></a>
+      <h4>PERFUME TRUE BLUE</h4>
+      <p>$240</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/Perfume5.html">
+    <img src="../imagenes/PERFUME/perfume5.jpg" alt="Car" style="width:100%"></a>
+      <h4>PERFUME SOFT & BLUE</h4>
+      <p>$350</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/Perfume6.html">
+    <img src="../imagenes/PERFUME/perfume6.jpg" alt="Car" style="width:100%"></a>
+      <h4>PERFUME INFINITY</h4>
+      <p>$260</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/Perfume7.html">
+    <img src="../imagenes/PERFUME/perfume7.jpg" alt="Car" style="width:100%"></a>
+      <h4>PERFUME CLOUD 9</h4>
+      <p>$290</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/Perfume8.html">
+    <img src="../imagenes/PERFUME/perfume8.jpg" alt="Car" style="width:100%"></a>
+      <h4>PERFUME CRYSTAL BALL</h4>
+      <p>$300</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/Perfume9.html">
+    <img src="../imagenes/PERFUME/perfume9.jpg" alt="Car" style="width:100%"></a>
+      <h4>PERFUME LUCI</h4>
+      <p>$275</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/Perfume10.html">
+    <img src="../imagenes/PERFUME/perfume10.jpg" alt="Car" style="width:100%"></a>
+      <h4>PERFUME CLUB 747</h4>
+      <p>$260</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/Perfume11.html">
+    <img src="../imagenes/PERFUME/perfume11.jpg" alt="Car" style="width:100%"></a>
+      <h4>PERFUME HIGH CLASS</h4>
+      <p>$250</p>
+    </div>
+  </div>
+
+  
+
+  <div class="column people">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/Perfume12.html">
+    <img src="../imagenes/PERFUME/perfume13.jpg" alt="Car" style="width:100%"></a>
+      <h4>PERFUME PARIS</h4>
+      <p>$280</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <a href="file:///Volumes/NO%20NAME/diplomado/paginas/Perfume13.html"> <img src="../imagenes/PERFUME/perfume14.jpg" alt="Car" style="width:100%"></a>
+      <h4>PERFUME MISTRESS</h4>
+      <p>$200</p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+ 
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
+<table border="0px" width="100%" height="150px">
+<tr>
+<td bgcolor="000000"><font color="white"><font face="HELVETICA"> 
+<br>
+<center><b>CONTACTO</b><a name="T2"></a>
+<br><br>
+
+
+<a href="https://www.instagram.com/violetaatrejo/?hl=es-la"><img src="../imagenes/ICONOS/ig.png" width="30px" height="30px"></img></a>
+
+&nbsp;&nbsp;&nbsp;
+Violetaa Trejo
+
+&nbsp;&nbsp;&nbsp;
+<a href="https://web.facebook.com/violetaatrejo">
+<img src="../imagenes/ICONOS/fb.png" width="40px" height="30px"></img></a>
+&nbsp;&nbsp;&nbsp;
+Violetaa Trejo
+
+
+&nbsp;&nbsp;&nbsp;
+<img src="../imagenes/ICONOS/gmail.png" width="40px" height="40px"></img>
+
+&nbsp;&nbsp;&nbsp;
+violetaatrejo@gmail.com
+
+<br><br>
+Violetaa Trejo / Todos los derechos reservados
+</center>
+</font>
+</td>
+</tr>
+
+
+</body>
+</html>
